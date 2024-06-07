@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Trilogia Original God of War</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <header class="text-center my-4">
+            <img src="37565-5-god-of-war-logo-photos.png" alt="Logo de God of War">
+        </header>
+        <p class="introduction">
+            God of War é uma série de jogos eletrônicos de ação-aventura criada por David Jaffe da Santa Monica Studio, da Sony. Iniciada em 2005 no console PlayStation 2 (PS2), tornou-se carro-chefe para a marca PlayStation, consistindo em nove jogos em várias plataformas. Baseada em distintas mitologias, a história segue Kratos, um guerreiro espartano que foi levado a matar sua família por seu antigo mestre, o deus da guerra Ares. Isso desencadeia uma série de eventos que levam às guerras com os panteões mitológicos. A era da mitologia grega da série mostra Kratos seguindo um caminho de vingança devido às maquinações dos deuses do Olimpo.
+        </p>
+        <div class="button-container text-center mb-4">
+            <button class="button btn btn-primary m-2" data-game="1">God of War I</button>
+            <button class="button btn btn-primary m-2" data-game="2">God of War II</button>
+            <button class="button btn btn-primary m-2" data-game="3">God of War III</button>
+        </div>
+        <div class="content" id="content1">
+            <img src="270px-God_of_War_2005_capa.png" alt="God of War I" class="img-fluid">
+            <div class="text-content">
+                <h2>God of War I</h2>
+                <p>Sinopse da História: Baseado vagamente na mitologia grega, o jogo se passa na Grécia Antiga, com vingança como seu tema central.
+                    O protagonista é Kratos, um guerreiro espartano que se torna o Deus da Guerra e entra em conflito com vários panteões mitológicos.
+                    Kratos é encarregado pela deusa Atena de matar Ares, o Deus da Guerra e antigo mentor de Kratos, que o enganou ao fazê-lo matar sua esposa e filha.</p>
+
+                <p>Personagens: Kratos, Athena, Ares, Oráculo da Vila, Oráculo de Athenas, Coveiro, Pathos Verdes III, Lisandra e Calíope.</p>
+
+                <p>Armas: Lâminas do Caos, Lâmina de Ártemis, Lâmina de Athena</p>
+
+                <p>Magias: Fúria de Poseidon, Olhar de Medusa, Fúria de Zeus, Exército de Hades.</p>
+
+                <p>Data de Lançamento: 22 de Março de 2005.</p>
+            </div>
+        </div>
+        <div class="content" id="content2">
+            <img src="God_of_War_2_capa.png" alt="God of War II" class="img-fluid">
+            <div class="text-content">
+                <h2>God of War II</h2>
+                <p>Sinopse da História: Continuação direta do primeiro jogo.
+                    Kratos busca vingança contra os deuses do Olimpo, especialmente Zeus.
+                    Ele embarca em uma jornada para encontrar a Lâmina de Ômega e desafiar os deuses diretamente.
+                    A trama envolve traições, batalhas épicas e a busca por poder divino.</p>
+
+                <p>Personagens: Kratos, Athena, Gaia, Último Espartano, Láquesis, Átropos, Cloto, Zeus.</p>
+
+                <p>Armas: Lâminas de Athena, Martelo Bárbaro, Lança do Destino, Lâmina do Olimpo.</p>
+
+                <p>Magias: Fúria de Poseidon, Desgraça de Tifão, Cabeça de Euríale, Tremos de Atlas.</p>
+
+                <p>Data de lançamento: 13 de março de 2007.</p>
+            </div>
+        </div>
+        <div class="content" id="content3">
+            <img src="270px-God_of_War_3_capa.png" alt="God of War III" class="img-fluid">
+            <div class="text-content">
+                <h2>God of War III</h2>
+                <p>Sinopse da História: O terceiro jogo da trilogia original.
+                    Kratos continua sua busca por vingança contra os deuses do Olimpo, especialmente Zeus.
+                    A batalha final entre Kratos e Zeus é o clímax do jogo, com consequências devastadoras para o mundo dos deuses.</p>
+
+                <p>Personagens: Kratos, Athena, Pandora, Dédalo, Helios, Hermes, Hera, Afrodite, Hercules, Cronos, Hades, Poseidon, Hefesto, Zeus, Gaia.</p>
+
+                <p>Armas: Lâminas de Athena, Lâminas do Exílio, Garras de Hades, Manoplas de Nemeia, Chicote de Nêmesis.</p>
+
+                <p>Magias: Cômputo Divino (Lâminas de Atena), Exército de Esparta (Lâminas do Exílio), Invocação de Almas (Garras de Hades), Rugido de Nemeia (Manoplas de Nemeia), Fúria de Nêmesis (Chicote de Nêmesis).</p>
+
+                <p>Data de Lançamento: 16 de março de 2010</p>
+            </div>
+        </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            document.querySelectorAll('.content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            
+            document.querySelectorAll('.button').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var gameNumber = this.getAttribute('data-game');
+                    document.querySelectorAll('.content').forEach(function(content) {
+                        content.style.display = 'none';
+                    });
+                    document.querySelector('#content' + gameNumber).style.display = 'flex';
+                });
+            });
+        });
+    </script>
+
+    <footer class="text-center py-3">
+        <p>Propriedade de: Sony Interactive Entertainment.</p>
+        <p>&copy; 2024 God of War.</p>
+    </footer>
+</body>
+</html>
